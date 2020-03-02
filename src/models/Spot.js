@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const SpotSchema = new mongoose.Schema({
     thumbnail: String,
     company: String,
-    prince: Number,
+    price: Number,
     techs: [String], //vetor com varias strings dentro
     user: {
-        type: mongoose.Schema.Types.ObjectId,    //gravar o Id do User
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User'                            
     }
 });

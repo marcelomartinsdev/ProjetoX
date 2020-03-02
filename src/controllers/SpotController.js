@@ -29,7 +29,7 @@ module.exports = {
             user: user_id,
             thumbnail: filename,
             company,
-            techs: techs.split(',').map(tech => tech.trim()), //tech.trim = tira os espacos da array
+            techs: techs.split(',').map( tech => tech.trim()), //tech.trim = tira os espacos da array
             price
         })
 

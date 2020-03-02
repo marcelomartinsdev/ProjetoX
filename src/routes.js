@@ -13,12 +13,10 @@ const upload = multer(uploadConfig);
 
 routes.post('/sessions', SessionController.store);
 
-
 routes.get('/spots', SpotController.index);
 
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 
 routes.get('/dashboard', DashboardController.show);
-
 
 module.exports = routes;

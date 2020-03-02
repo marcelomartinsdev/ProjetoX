@@ -3,6 +3,6 @@ const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
-routes.post('/users', SessionController.store);
+routes.post('/sessions', SessionController.store);
 
 module.exports = routes;

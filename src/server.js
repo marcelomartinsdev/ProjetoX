@@ -2,8 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    return res.json({message: "Hello Omnistack"});
+app.use(express.json());
+
+app.post('/users', (req, res) => {
+    return res.json({ idade: req.body });
 });
 
-app.listen(3333);
+app.listen(1234);

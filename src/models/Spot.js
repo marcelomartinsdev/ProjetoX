@@ -6,7 +6,7 @@ const SpotSchema = new mongoose.Schema({
     price: Number,
     techs: [String], //vetor com varias strings dentro
     user: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,    //gravar o Id do User
         ref: 'User'                            
     }
 });

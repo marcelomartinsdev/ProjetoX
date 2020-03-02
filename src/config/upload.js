@@ -8,7 +8,11 @@ module.exports = {
     storage: multer.diskStorage({
         destination: path.resolve(__dirname, '..', '..', 'uploads'),         //diretorio dos arquivos - path.resolve muda barra inversa por ' , '
         filename: (req, file, cb ) => {
-            cb(null, `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`);
+            const ext = path.extname(file.originalname);
+            const name = path.basename(file.originalname, ext);
+
+
+            cb(null, `${name}-${Date.now()}${ext}`);
         },                            
     }),
 }
